@@ -32,3 +32,8 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic valid --
 
 ## Pausing and resuming the validator 
 You may have some scenarios where you want to pause the kafka consumer for some duration. This can be done using REST endpoints exposed by the **StreamController**.
+
+You can look at the offsets of the topic, the validator consumer's offset and lag by executing the following command
+```
+bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group validator
+```
